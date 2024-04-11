@@ -1,0 +1,41 @@
+/* Universal Selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  min-height: 100vh;
+}
+
+/* Class Selector with Animation */
+.mainDiv {
+  width: 1100;
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, transparent, #000400);
+}
+
+.mainDiv > img {
+  max-width: 350px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px grey;
+  transition: 0.5s;
+  transform: perspective(800px) rotateY(20deg);
+  transform-origin: center;
+}
+
+.mainDiv:hover > img {
+  opacity: 0.3;
+}
+
+.mainDiv > img:hover {
+  opacity: 1;
+  transform: perspective(800px) rotateY(0deg);
+}
